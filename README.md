@@ -46,5 +46,14 @@ Click on Role, then Create role.
 Select the  AWS service and EC2 under "Select trusted entity" , then click on next
 ![image](https://user-images.githubusercontent.com/107158398/180995564-a8ab3120-3a90-4595-ac5e-9a1630bf4dcb.png)
 
+Under Add Permissions, select these permissions:
+AmazonS3FullAccess, 
+IAMFullAccess, 
+AmazonRoute53FullAccess,
+AmazonEC2FullAccess
+
+Then click on next,
+![image](https://user-images.githubusercontent.com/107158398/180996681-ce17a559-df80-4289-b431-bf1a120f11a6.png)
+
 
 
