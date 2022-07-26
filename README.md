@@ -176,4 +176,6 @@ kops get clusters
 ```
  kops create cluster --cloud=aws --zones=us-east-1d --name=serge.kubernetes.net --dns-zone=serge.kubernetes.net --dns private
 ```
-
+```
+kops create cluster --cloud=aws --zones=us-east-2b --name=kops.devopstrainingschool.com --dns-zone=kops.devopstrainingschool.com --dns private
+```
