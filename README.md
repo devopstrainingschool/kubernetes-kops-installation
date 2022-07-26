@@ -130,6 +130,32 @@ Kops needs the required DNS records to build a cluster.
 #### This is the output
 ![image](https://user-images.githubusercontent.com/107158398/181127959-87a50290-9b92-4d55-ad42-9eeb4378da03.png)
 
+
+## Install AWS CLI
+```
+apt-get update
+```
+### Install AWS CLI
+```
+sudo apt-get install awscli
+```
+### check the version
+```
+aws --version
+```
+## Configure the AWS configure
+```
+aws configure
+```
+### Access: (press enter only)
+### Secret key : (press enter only)
+### Region: us-east-2
+### Default output format: (press enter only)
+![image](https://user-images.githubusercontent.com/107158398/181129977-552aad19-0c2b-4eb2-abd4-9b3979517001.png)
+
+
+
+
 ## Create a Kubernetes Cluster using Kops
 Now we are all set to create a cluster. Before creating a cluster, let's see what we get when we try to list the clusters.
 ```
