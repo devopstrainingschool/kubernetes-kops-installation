@@ -56,4 +56,65 @@ Then click on next,
 ![image](https://user-images.githubusercontent.com/107158398/180996681-ce17a559-df80-4289-b431-bf1a120f11a6.png)
 
 
+Name the role kops and finally click on create role.
+### Let's create a EC2 Instance using Ubuntu 20.04 flavor
+![image](https://user-images.githubusercontent.com/107158398/180997566-17c88886-ccac-44b6-be42-ab8adcf16aa2.png)
+
+Make sure to update the inbound in the security group
+### Attach the IAM Role to the instance
+Once you have the role, attach it to the EC2 instance you will use to execute the kops commands. Go to EC2 --> select the EC2 instance --> click on Actions --> Security -- > Modify IAM role.
+![image](https://user-images.githubusercontent.com/107158398/180998369-711f12ae-881d-4455-b640-9c07003f7777.png)
+Select the  IAM role we created early (kops) and save the changes.
+![image](https://user-images.githubusercontent.com/107158398/180998795-9b94c7bc-ef74-4cc4-9375-ddb5641ac4a0.png)
+
+
+## Install Kubectl and Kops on the EC2 instance
+Till this point, you have an S3 bucket and an EC2 instance with the required role attached to it. Now login into the EC2 instance you will use to create a cluster using Kops.
+
+The next step is to install Kubectl on the EC2 instance.
+
+Execute the following commands to install kubectl on Ubuntu Server
+
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s 
+```
+```
+curl -LO "https://dl.k8s.io/$(curl -L -s 
+```
+```
+echo "$(<kubectl.sha256) kubectl" | sha256sum --check
+```
+```
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+```
+mkdir -p ~/.local/bin/kubectl
+```
+```
+mv ./kubectl ~/.local/bin/kubectl
+```
+Check the kubectl version using the following command
+```
+kubectl version --client
+```
+Now you are ready to install Kops on the same EC2 instance.
+
+Check if the kops exists, if not then install it using the following commands on Ubuntu Server.
+```
+kops
+```
+```
+curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+```
+```
+chmod +x kops-linux-amd64
+```
+```
+sudo mv kops-linux-amd64 /usr/local/bin/kops
+```
+Now you should have kops on the server.
+```
+kops
+```
+
 
