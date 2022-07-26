@@ -37,5 +37,14 @@ fill out the info with the bucket name and region and the click on Create
 If everything is successfull, you will a similar output
 ![image](https://user-images.githubusercontent.com/107158398/180993991-8b176296-2cd5-42ee-bcf2-8763694e3efd.png)
 
+### Let's create an IAM Role for KOPS
+Go to services, then click on IAM 
+![image](https://user-images.githubusercontent.com/107158398/180994933-a13bd077-82cf-4c01-9150-383647f1ec16.png)
+Click on Role, then Create role.
+![image](https://user-images.githubusercontent.com/107158398/180995218-f797895e-933a-48e4-9ab5-4c267e7a7387.png)
+
+Select the  AWS service and EC2 under "Select trusted entity" , then click on next
+![image](https://user-images.githubusercontent.com/107158398/180995564-a8ab3120-3a90-4595-ac5e-9a1630bf4dcb.png)
+
 
 
