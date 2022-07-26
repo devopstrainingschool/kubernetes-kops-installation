@@ -127,9 +127,25 @@ Kops needs the required DNS records to build a cluster.
 #### Type: Private hosted zone , and region: ohio and , VPC ID the default one
 #### click one create hosted zone
 ![image](https://user-images.githubusercontent.com/107158398/181127832-5e45ea1f-6432-4f24-937b-b3185b8ccf3e.png)
-This is the output
+#### This is the output
 ![image](https://user-images.githubusercontent.com/107158398/181127959-87a50290-9b92-4d55-ad42-9eeb4378da03.png)
 
-
+## Create a Kubernetes Cluster using Kops
+Now we are all set to create a cluster. Before creating a cluster, let's see what we get when we try to list the clusters.
+```
+kops get clusters
+```
+The above command will fail as it needs an S3 bucket as a parameter.
+```
+kops get clusters --state s3://kops.devopstrainingschool.com
+```
+### Add Environment variables
+```
+export KOPS_STATE_STORE=s3://kops.devopstrainingschool.com
+```
+This time you don't need to specify the S3 bucket in the command
+```
+kops get clusters
+```
 
 
