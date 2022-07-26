@@ -117,5 +117,19 @@ Now you should have kops on the server.
 ```
 kops
 ```
+The output should be similar to this:
+![image](https://user-images.githubusercontent.com/107158398/181126963-992fd8d8-71a9-4303-9f5c-7f9815273d0f.png)
+
+## Validate  Recordset rules and a hosted zone.
+Kops needs the required DNS records to build a cluster. 
+### Go to Services , then Route 53 , then hosted zones, and click on create hosted zone
+#### Domain: kops.devosptrainingschool.com
+#### Type: Private hosted zone , and region: ohio and , VPC ID the default one
+#### click one create hosted zone
+![image](https://user-images.githubusercontent.com/107158398/181127832-5e45ea1f-6432-4f24-937b-b3185b8ccf3e.png)
+This is the output
+![image](https://user-images.githubusercontent.com/107158398/181127959-87a50290-9b92-4d55-ad42-9eeb4378da03.png)
+
+
 
 
