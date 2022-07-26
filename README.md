@@ -76,10 +76,10 @@ The next step is to install Kubectl on the EC2 instance.
 Execute the following commands to install kubectl on Ubuntu Server
 
 ```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s 
+curl -LO "https://dl.k8s.io/release/$(curl -L -s )
 ```
 ```
-curl -LO "https://dl.k8s.io/$(curl -L -s 
+curl -LO "https://dl.k8s.io/$(curl -L -s )
 ```
 ```
 echo "$(<kubectl.sha256) kubectl" | sha256sum --check
