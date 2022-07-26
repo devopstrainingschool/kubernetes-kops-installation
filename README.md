@@ -173,5 +173,7 @@ This time you don't need to specify the S3 bucket in the command
 ```
 kops get clusters
 ```
-
+```
+ kops create cluster --cloud=aws --zones=us-east-1d --name=serge.kubernetes.net --dns-zone=serge.kubernetes.net --dns private
+```
 
