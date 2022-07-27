@@ -220,5 +220,25 @@ kops delete cluster kops.devopstrainingschool.com --yes
 kops validate cluster
 ```
 
+# Check that all is good
+## Check the nodes
+```
+kubectl get nodes
+```
+![image](https://user-images.githubusercontent.com/107158398/181138709-870c5d85-0004-4be3-ad7f-f8e0809b8c8b.png)
+
+## Let run of second app
+```
+kubectl run my-app --image=devopstrainingschool/java-maven-jenkins --port=8080
+```
+## add the service to access it from the browser
+```
+kubectl expose pod my-app --type=NodePort --port=8080 --target-port=8080
+```
+## check that the services are up and running
+```
+kubectl get svc -A
+```
+# Thank you
 
  
