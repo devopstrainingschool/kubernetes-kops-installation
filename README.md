@@ -186,6 +186,7 @@ kops get clusters
 ```
 kops create cluster --cloud=aws --zones=us-east-2b --name=kops.devopstrainingschool.com --dns-zone=kops.devopstrainingschool.com --dns private
 ```
+the --zones=make sure it is the same as where you create your EC2
 Finally configure your cluster with:
 ```
 kops update cluster --name kops.devopstrainingschool.com --yes --admin
@@ -195,11 +196,33 @@ Suggestions:
  ```
  kops validate cluster --wait 10m
  ```
+ or if you want three nodes
+ ```
+ kops validate cluster --wait 10m --count 3
+ ```
  * list nodes:
  ```
  kubectl get nodes --show-labels
  ```
- * ssh to the master: 
+ If in the future , you want to connect (ssh) to the master , run this command:
  ```
  ssh -i ~/.ssh/id_rsa ubuntu@api.kops.devopstrainingschool.com
+ ```
+ # WHEN you are done , please delete the cluster by running these commands:
+ ## run this command to get the cluster name:
+ ```
+ kops validate cluster
+ ```
+ ![image](https://user-images.githubusercontent.com/107158398/181135171-52fc3a09-cd75-45ba-8547-93c7b8e4cbfa.png)
+
+## run this command to delete it
 ```
+kops delete cluster kops.devopstrainingschool.com --yes
+```
+## check that the cluster is deleted
+```
+kops validate cluster
+```
+
+
+ 
