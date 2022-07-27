@@ -196,10 +196,6 @@ Suggestions:
  ```
  kops validate cluster --wait 10m
  ```
- or if you want three nodes
- ```
- kops validate cluster --wait 10m --count 3
- ```
  * list nodes:
  ```
  kubectl get nodes --show-labels
