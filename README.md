@@ -130,7 +130,11 @@ Kops needs the required DNS records to build a cluster.
 #### This is the output
 ![image](https://user-images.githubusercontent.com/107158398/181127959-87a50290-9b92-4d55-ad42-9eeb4378da03.png)
 
-
+## Create SSH Keys
+Create ssh keys on Ubuntu instance to exchange kubernetes cluster and connect
+```
+ssh-keygen 
+```
 ## Install AWS CLI
 ```
 apt-get update
@@ -180,8 +184,22 @@ This time you don't need to specify the S3 bucket in the command
 kops get clusters
 ```
 ```
- kops create cluster --cloud=aws --zones=us-east-1d --name=serge.kubernetes.net --dns-zone=serge.kubernetes.net --dns private
-```
-```
 kops create cluster --cloud=aws --zones=us-east-2b --name=kops.devopstrainingschool.com --dns-zone=kops.devopstrainingschool.com --dns private
+```
+Finally configure your cluster with:
+```
+kops update cluster --name kops.devopstrainingschool.com --yes --admin
+```
+Suggestions:
+ * validate cluster: 
+ ```
+ kops validate cluster --wait 10m
+ ```
+ * list nodes:
+ ```
+ kubectl get nodes --show-labels
+ ```
+ * ssh to the master: 
+ ```
+ ssh -i ~/.ssh/id_rsa ubuntu@api.kops.devopstrainingschool.com
 ```
