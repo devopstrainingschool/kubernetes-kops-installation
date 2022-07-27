@@ -144,11 +144,17 @@ sudo apt-get install awscli
 aws --version
 ```
 ## Configure the AWS configure
+### Create and configure IAM User in AWS
+Create IAM user in AWS using login console -> IAM -> ADD User -> Username -> Select Programmatic access -> then you will get Access Key ID and Secret Access Key.
+
+Configure AWS CLI with your Access Key ID,  Secret Access  key and region
+![image](https://user-images.githubusercontent.com/107158398/181133981-6079cf37-89ae-41ae-bbdb-0c639a0f686f.png)
+
 ```
 aws configure
 ```
-### Access: (press enter only)
-### Secret key : (press enter only)
+### Access key:put your access key
+### Secret key : put the secet key
 ### Region: us-east-2
 ### Default output format: (press enter only)
 ![image](https://user-images.githubusercontent.com/107158398/181129977-552aad19-0c2b-4eb2-abd4-9b3979517001.png)
