@@ -51,6 +51,7 @@ AmazonS3FullAccess,
 IAMFullAccess, 
 AmazonRoute53FullAccess,
 AmazonEC2FullAccess
+AdministratorAccess
 
 Then click on next,
 ![image](https://user-images.githubusercontent.com/107158398/180996681-ce17a559-df80-4289-b431-bf1a120f11a6.png)
