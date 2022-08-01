@@ -206,21 +206,7 @@ Suggestions:
  ```
  ssh -i ~/.ssh/id_rsa ubuntu@api.kops.devopstrainingschool.com
  ```
- # WHEN you are done , please delete the cluster by running these commands:
- ## run this command to get the cluster name:
- ```
- kops validate cluster
- ```
- ![image](https://user-images.githubusercontent.com/107158398/181135171-52fc3a09-cd75-45ba-8547-93c7b8e4cbfa.png)
-
-## run this command to delete it
-```
-kops delete cluster kops.devopstrainingschool.com --yes
-```
-## check that the cluster is deleted
-```
-kops validate cluster
-```
+ 
 
 # Check that all is good
 ## Check the nodes
@@ -240,6 +226,22 @@ kubectl expose pod my-app --type=NodePort --port=8080 --target-port=8080
 ## check that the services are up and running
 ```
 kubectl get svc -A
+```
+
+# WHEN you are done , please delete the cluster by running these commands:
+ ## run this command to get the cluster name:
+ ```
+ kops validate cluster
+ ```
+ ![image](https://user-images.githubusercontent.com/107158398/181135171-52fc3a09-cd75-45ba-8547-93c7b8e4cbfa.png)
+
+## run this command to delete it
+```
+kops delete cluster kops.devopstrainingschool.com --yes
+```
+## check that the cluster is deleted
+```
+kops validate cluster
 ```
 # Thank you
 
