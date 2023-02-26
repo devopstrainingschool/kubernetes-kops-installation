@@ -184,6 +184,9 @@ This time you don't need to specify the S3 bucket in the command
 ```
 kops get clusters
 ```
+###  The output should be similar to this
+![image](https://user-images.githubusercontent.com/107158398/221391604-c03247f0-ad96-4e92-b334-42ec61672022.png)
+
 ## RUN this command to install KOPS Cluster
 ```
 kops create cluster --cloud=aws --zones=us-east-2b --name=kops.devopstrainingschool.com --dns-zone=kops.devopstrainingschool.com --dns private
